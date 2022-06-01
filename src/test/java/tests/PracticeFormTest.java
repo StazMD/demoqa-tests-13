@@ -37,7 +37,7 @@ public class PracticeFormTest {
         $("#subjectsInput").pressEnter();
         $(byText("Reading")).click();
         $(byText("Music")).click();
-        $("#uploadPicture").uploadFile (new File("src/test/java/resources/image.png"));
+        $("#uploadPicture").uploadFile(new File("src/test/resources/image.png"));
         $("#currentAddress").setValue("Puskin street 145"); //
         $("#state").click();
         $("#stateCity-wrapper").$(byText("NCR")).click();
@@ -46,8 +46,15 @@ public class PracticeFormTest {
         $("#submit").scrollTo().click();
 
         $(".modal-content").shouldHave(text("Thanks for submitting the form"),
-                text("Stanislav Scurtu"),text("stanislav.scurtu@gmail.com"),text("Male"),
-                text("1234567890"),text("04 February,1987"),text("Physics"),
-                text("Reading, Music"),text("image.png"),text("Puskin street 145"),text("NCR Noida"));
+                text("Stanislav Scurtu"),
+                text("stanislav.scurtu@gmail.com"),
+                text("Male"),
+                text("1234567890"),
+                text("04 February,1987"),
+                text("Physics"),
+                text("Reading, Music"),
+                text("image.png"),
+                text("Puskin street 145"),
+                text("NCR Noida"));
     }
 }
